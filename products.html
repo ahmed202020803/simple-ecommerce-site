@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - ShopEasy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="index.html">
+                        <h1>Shop<span>Easy</span></h1>
+                    </a>
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html" class="active">Products</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-icons">
+                    <a href="search.html" class="icon-link"><i class="fas fa-search"></i></a>
+                    <a href="account.html" class="icon-link"><i class="fas fa-user"></i></a>
+                    <a href="cart.html" class="icon-link cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                    <button class="mobile-menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="categories.html">Categories</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Products</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Products</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <div class="products-container">
+                <div class="filters-sidebar">
+                    <div class="filter-group">
+                        <h3>Categories</h3>
+                        <ul class="filter-list">
+                            <li>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="category" value="men">
+                                    <span class="checkbox-custom"></span>
+                                    Men's Fashion
+                                    <span class="count">(24)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="category" value="women">
+                                    <span class="checkbox-custom"></span>
+                                    Women's Fashion
+                                    <span class="count">(36)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="category" value="accessories">
+                                    <span class="checkbox-custom"></span>
+                                    Accessories
+                                    <span class="count">(18)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="category" value="footwear">
+                                    <span class="checkbox-custom"></span>
+                                    Footwear
+                                    <span class="count">(12)</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Price Range</h3>
+                        <div class="price-slider">
+                            <div class="price-inputs">
+                                <div class="price-input">
+                                    <label>Min</label>
+                                    <input type="number" id="min-price" value="0" min="0" max="1000">
+                                </div>
+                                <div class="price-input">
+                                    <label>Max</label>
+                                    <input type="number" id="max-price" value="500" min="0" max="1000">
+                                </div>
+                            </div>
+                            <div class="slider-container">
+                                <div class="slider-track"></div>
+                                <input type="range" id="price-min" min="0" max="1000" value="0" step="10">
+                                <input type="range" id="price-max" min="0" max="1000" value="500" step="10">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Colors</h3>
+                        <div class="color-filters">
+                            <label class="color-filter">
+                                <input type="checkbox" name="color" value="black">
+                                <span class="color-swatch" style="background-color: #000;"></span>
+                                <span class="color-name">Black</span>
+                            </label>
+                            <label class="color-filter">
+                                <input type="checkbox" name="color" value="white">
+                                <span class="color-swatch" style="background-color: #fff; border: 1px solid #ddd;"></span>
+                                <span class="color-name">White</span>
+                            </label>
+                            <label class="color-filter">
+                                <input type="checkbox" name="color" value="red">
+                                <span class="color-swatch" style="background-color: #e74c3c;"></span>
+                                <span class="color-name">Red</span>
+                            </label>
+                            <label class="color-filter">
+                                <input type="checkbox" name="color" value="blue">
+                                <span class="color-swatch" style="background-color: #3498db;"></span>
+                                <span class="color-name">Blue</span>
+                            </label>
+                            <label class="color-filter">
+                                <input type="checkbox" name="color" value="green">
+                                <span class="color-swatch" style="background-color: #2ecc71;"></span>
+                                <span class="color-name">Green</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Size</h3>
+                        <div class="size-filters">
+                            <label class="size-filter">
+                                <input type="checkbox" name="size" value="xs">
+                                <span class="size-box">XS</span>
+                            </label>
+                            <label class="size-filter">
+                                <input type="checkbox" name="size" value="s">
+                                <span class="size-box">S</span>
+                            </label>
+                            <label class="size-filter">
+                                <input type="checkbox" name="size" value="m">
+                                <span class="size-box">M</span>
+                            </label>
+                            <label class="size-filter">
+                                <input type="checkbox" name="size" value="l">
+                                <span class="size-box">L</span>
+                            </label>
+                            <label class="size-filter">
+                                <input type="checkbox" name="size" value="xl">
+                                <span class="size-box">XL</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>Rating</h3>
+                        <ul class="filter-list">
+                            <li>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="rating" value="5">
+                                    <span class="checkbox-custom"></span>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <span class="count">(42)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="rating" value="4">
+                                    <span class="checkbox-custom"></span>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="count">(28)</span>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="filter-checkbox">
+                                    <input type="checkbox" name="rating" value="3">
+                                    <span class="checkbox-custom"></span>
+                                    <div class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                    </div>
+                                    <span class="count">(14)</span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <button class="btn filter-apply-btn">Apply Filters</button>
+                    <button class="btn-outline filter-reset-btn">Reset Filters</button>
+                </div>
+
+                <div class="products-content">
+                    <div class="products-header">
+                        <div class="products-count">
+                            <p>Showing <span>1-12</span> of <span>96</span> products</p>
+                        </div>
+                        <div class="products-sorting">
+                            <label for="sort-by">Sort by:</label>
+                            <select id="sort-by">
+                                <option value="popularity">Popularity</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="newest">Newest First</option>
+                                <option value="rating">Highest Rated</option>
+                            </select>
+                        </div>
+                        <div class="view-options">
+                            <button class="view-btn grid-view active"><i class="fas fa-th"></i></button>
+                            <button class="view-btn list-view"><i class="fas fa-list"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="products-grid">
+                        <!-- Product 1 -->
+                        <div class="product-card">
+                            <div class="product-badge">New</div>
+                            <div class="product-image">
+                                <img src="https://via.placeholder.com/300x300" alt="Product 1">
+                                <div class="product-actions">
+                                    <button class="action-btn add-to-cart" data-id="1"><i class="fas fa-shopping-cart"></i></button>
+                                    <button class="action-btn add-to-wishlist" data-id="1"><i class="fas fa-heart"></i></button>
+                                    <button class="action-btn quick-view" data-id="1"><i class="fas fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Casual T-Shirt</h3>
+                                <div class="product-price">
+                                    <span class="current-price">$29.99</span>
+                                    <span class="old-price">$39.99</span>
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span>(24)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="product-card">
+                            <div class="product-badge sale">Sale</div>
+                            <div class="product-image">
+                                <img src="https://via.placeholder.com/300x300" alt="Product 2">
+                                <div class="product-actions">
+                                    <button class="action-btn add-to-cart" data-id="2"><i class="fas fa-shopping-cart"></i></button>
+                                    <button class="action-btn add-to-wishlist" data-id="2"><i class="fas fa-heart"></i></button>
+                                    <button class="action-btn quick-view" data-id="2"><i class="fas fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Denim Jacket</h3>
+                                <div class="product-price">
+                                    <span class="current-price">$59.99</span>
+                                    <span class="old-price">$79.99</span>
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(42)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://via.placeholder.com/300x300" alt="Product 3">
+                                <div class="product-actions">
+                                    <button class="action-btn add-to-cart" data-id="3"><i class="fas fa-shopping-cart"></i></button>
+                                    <button class="action-btn add-to-wishlist" data-id="3"><i class="fas fa-heart"></i></button>
+                                    <button class="action-btn quick-view" data-id="3"><i class="fas fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Leather Handbag</h3>
+                                <div class="product-price">
+                                    <span class="current-price">$89.99</span>
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span>(18)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="product-card">
+                            <div class="product-badge out-of-stock">Out of Stock</div>
+                            <div class="product-image">
+                                <img src="https://via.placeholder.com/300x300" alt="Product 4">
+                                <div class="product-actions">
+                                    <button class="action-btn add-to-wishlist" data-id="4"><i class="fas fa-heart"></i></button>
+                                    <button class="action-btn quick-view" data-id="4"><i class="fas fa-eye"></i></button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Running Shoes</h3>
+                                <div class="product-price">
+                                    <span class="current-price">$119.99</span>
+                                </div>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span>(56)</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- More products (5-12) would be added here -->
+                        <!-- For brevity, I'm only showing 4 products -->
+                    </div>
+
+                    <div class="pagination">
+                        <a href="#" class="pagination-prev disabled"><i class="fas fa-chevron-left"></i></a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <span class="pagination-dots">...</span>
+                        <a href="#">8</a>
+                        <a href="#" class="pagination-next"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <h2>Shop<span>Easy</span></h2>
+                    </div>
+                    <p>Your one-stop shop for all your fashion needs. Quality products at affordable prices.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="shipping.html">Shipping & Delivery</a></li>
+                        <li><a href="returns.html">Returns & Exchanges</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, Country</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope"></i> info@shopeasy.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ShopEasy. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="quick-view-modal" id="quickViewModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="product-quick-view">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img src="https://via.placeholder.com/500x500" alt="Product Image">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="https://via.placeholder.com/100x100" alt="Thumbnail 1" class="active">
+                        <img src="https://via.placeholder.com/100x100" alt="Thumbnail 2">
+                        <img src="https://via.placeholder.com/100x100" alt="Thumbnail 3">
+                    </div>
+                </div>
+                <div class="product-details">
+                    <h2 class="product-title">Product Name</h2>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(24 reviews)</span>
+                    </div>
+                    <div class="product-price">
+                        <span class="current-price">$29.99</span>
+                        <span class="old-price">$39.99</span>
+                    </div>
+                    <div class="product-description">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc sit amet ultricies lacinia, nisl nisl aliquam nisl, eget aliquam nisl nisl sit amet nisl.</p>
+                    </div>
+                    <div class="product-variants">
+                        <div class="variant-group">
+                            <label>Size:</label>
+                            <div class="variant-options size-options">
+                                <button class="variant-option">S</button>
+                                <button class="variant-option active">M</button>
+                                <button class="variant-option">L</button>
+                                <button class="variant-option">XL</button>
+                            </div>
+                        </div>
+                        <div class="variant-group">
+                            <label>Color:</label>
+                            <div class="variant-options color-options">
+                                <button class="variant-option color-option" style="background-color: #000;"></button>
+                                <button class="variant-option color-option active" style="background-color: #3498db;"></button>
+                                <button class="variant-option color-option" style="background-color: #e74c3c;"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="1" min="1" max="10">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="btn add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        <button class="btn-icon wishlist-btn"><i class="far fa-heart"></i></button>
+                    </div>
+                    <div class="product-meta">
+                        <p><span>SKU:</span> PRD-123456</p>
+                        <p><span>Category:</span> <a href="#">Clothing</a></p>
+                        <p><span>Tags:</span> <a href="#">Fashion</a>, <a href="#">Summer</a>, <a href="#">Casual</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+                <a href="products.html" class="btn">Start Shopping</a>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount">$0.00</span>
+            </div>
+            <div class="cart-buttons">
+                <a href="cart.html" class="btn btn-outline">View Cart</a>
+                <a href="checkout.html" class="btn">Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay"></div>
+
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
